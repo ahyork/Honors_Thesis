@@ -1,0 +1,104 @@
+=== Modelling Gas Adsorption in Metal-Organic Frameworks with a Grand-Canonical Monte Carlo Simulation ===
+
+TIMELINE
+
+[ ] Read and Summarize past literature on the topic
+    > Due: 31 October 2019
+    > To: Myself
+    > Notes: 
+
+[ ] Gather questions/research/data/themes
+    > Due: 6 January 2020
+    > To: Myself
+    > Notes:
+        * Trying to finish collecting data by start of winter term to be able to
+            focus on writing.
+        * Should have most of the data already, this project already has a lot
+            of work done
+
+[ ] Analyze thesis questions/data/research/themes
+    > Due: 31 January 2020
+    > To: Myself
+    > Notes:
+        * Giving myself 4 weeks to look through data and plan writing.
+
+[ ] Select Committee Members
+    > Due: 21 February 2020
+    > To: Cory
+    > Notes:
+        * Can do this sooner, should just ask people to be on my committee if I
+            find someone that would be a good fit
+
+[ ] Write and Format Thesis Rough Draft
+    > Due: 20 March 2020
+    > To: Cory
+    > Notes:
+        * This is the end of finals week for winter term. I want this to be done
+            before spring break so I can give it some time off before I start
+            revising.
+
+[ ] Revise Thesis
+    > Due: 24 April 2020
+    > To: Cory
+    > Notes:
+        * This will be the end of week 4. This gives me a week off from writing
+            then four weeks to finish revisions
+
+[ ] Turn in Finalized Thesis to Committee Members
+    > Due: 27 April 2020
+    > To: Committee Members
+    > Notes:
+
+[ ] Schedule Thesis Defense
+    > Due: 1 May 2020
+    > To: Honors College (?)
+    > Notes:
+        * Talk with HC advisor to see who I talk to about this
+        * This due date is less important than scheduling it two weeks prior to
+            the defense. Ideally, I can schedule this as soon as I find a date
+            and time that works for everyone.
+
+[ ] Design and Print Thesis Poster
+    > Due: 6 May 2020
+    > To: Printing Center (Library)
+    > Notes:
+        * Try to turn this in a few days before finalizing the presentation. I
+            want these to hold similar information. 
+
+[ ] Create a Presentation for the Project
+    > Due: 8 May 2020
+    > To: Myself
+    > Notes:
+        * Try to finalize this one week before the defense. I want a week to
+            practice a final version so I am prepared for teh defense.
+
+[ ] Defend Thesis Project
+    > Due: 15 May 2020
+    > To: Committee
+    > Notes:
+        * Don't need this exact date. I would like to be totally done with the
+            thesis by the end of the term with two weeks of revisions.
+        * Try to aim for sometime during or before week 9
+
+[ ] Make Revisions to Thesis and Format
+    > Due: 28 May 2020
+    > To: Cory and Committee
+    > Notes:
+        * Not a hard date, just need enough time to gather signatures before end
+            of the term.
+
+[ ] Upload Thesis to OSU Scholar Archives
+    > Due: 29 May 2020
+    > To: OSU Scholar Archives
+    > Notes:
+        * Just need it in before end of term.
+
+[ ] Gather Approval Signatures
+    > Due: 29 May 2020
+    > To: Committee
+    > Notes:
+        * Get this as soon as possible after finalizing revisions.
+
+[ ] Submit Thesis
+    > Due: 5 June 2020
+    > To: Honors College Office
