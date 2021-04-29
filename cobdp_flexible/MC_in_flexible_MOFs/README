@@ -1,0 +1,3 @@
+- d/l'ed from SI of link to CCDC deposited structures in Jarad Mason's paper.
+deleted two H atoms from each xtal structure that shouldn't be there
+converted to P1 via openbabel.
