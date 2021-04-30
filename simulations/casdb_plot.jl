@@ -2,6 +2,8 @@ using PyPlot
 using JLD2
 using Printf
 
+#pyplot()
+
 structure_names = ["KAXQIL_clean_P1.cif"]
 
 grid(true, linestyle="--", zorder=0) # the grid will be present
@@ -9,23 +11,32 @@ grid(true, linestyle="--", zorder=0) # the grid will be present
 for structure in structure_names
     print_name = split(structure, ".")[1]
     input_file = split(structure, ".")[1] * "_UFF_10Kcycles.jld2"
+    #input_file = split(structure, ".")[1] * "_UFF_100Kcycles.jld2"
     @load input_file results density
 
     pressures = [results[i]["pressure (bar)"] for i = 1:length(results)]
     mmolg = [results[i]["⟨N⟩ (mmol/g)"] for i = 1:length(results)]
+    errors = [results[i]["err ⟨N⟩ (mmol/g)"] for i = 1:length(results)]
+    mmolg_min = mmolg .- errors
+    mmolg_max = mmolg .+ errors
+    ribbons = (mmolg_min, mmolg_max)
 
     if print_name == "KAXQIL_clean_P1"
         simulated_color = "orange"
-        marker = "^"
-    elseif print_name == "KAXQIL_clean_P1_min"
-        simulated_color = "black"
         marker = "o"
-    elseif print_name == "KAXQIL_clean_P1_md"
-        simulated_color = "magenta"
-        marker = "s"
     end
     
-    plot(pressures, mmolg, label=print_name * " Simulation (298 K)", color=simulated_color, marker=marker, mfc="none", zorder=1000, clip_on=false) # simulated data
+    # plot the line lowest
+    plot(pressures, mmolg, color=simulated_color, linewidth=0.75, zorder=100, clip_on=false) # simulated data
+
+    # plot the error bars above the line
+    errorbar(pressures, mmolg, yerr=errors, ecolor="black", capsize=1.5, elinewidth=0.5, capthick=0.5,
+             marker="", linestyle="", zorder=200, clip_on=false) # simulated data
+
+    # plot the points a tthe top so they are clear
+    scatter(pressures, mmolg, s=4, linewidth=0.5, label=print_name * " Simulation (298 K)",
+         edgecolors=simulated_color, marker=marker, c="white", zorder=300,
+         clip_on=false) # simulated data
 end
 xlabel("Pressure (bar)")
 ylabel("Methane Adsorbed (mmol/g)")
