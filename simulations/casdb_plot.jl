@@ -1,6 +1,8 @@
 using PyPlot
 using JLD2
 using Printf
+using CSV
+using DataFrames
 
 #pyplot()
 
@@ -22,7 +24,9 @@ for structure in structure_names
     ribbons = (mmolg_min, mmolg_max)
 
     if print_name == "KAXQIL_clean_P1"
-        simulated_color = "orange"
+        # hex pastel red: xFF9C9F
+        # hex pastel orange: xF0CFB9
+        simulated_color = "#F0CFB9"
         marker = "o"
     end
     
@@ -38,8 +42,14 @@ for structure in structure_names
          edgecolors=simulated_color, marker=marker, c="white", zorder=300,
          clip_on=false) # simulated data
 end
+
+# plot experimental data from cory's paper
+# hex pastel blue: xBED5E8
+exp_data = CSV.File("experimental_xe_adsorption.csv", header=false) |> DataFrame
+scatter(exp_data[:, 1], exp_data[:, 2], s=4, c="#BED5E8", label="CaSDB Experimental (298 K)", zorder=300, clip_on=false)
+
 xlabel("Pressure (bar)")
-ylabel("Methane Adsorbed (mmol/g)")
+ylabel("Xenon Adsorbed (mmol/g)")
 #xscale("log")
 #ylim([0, 250])
 #xlim([0, 70])
