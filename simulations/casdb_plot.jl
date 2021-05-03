@@ -12,8 +12,8 @@ grid(true, linestyle="--", zorder=0) # the grid will be present
 #set_axisbelow(true)
 for structure in structure_names
     print_name = split(structure, ".")[1]
-    input_file = split(structure, ".")[1] * "_UFF_10Kcycles.jld2"
-    #input_file = split(structure, ".")[1] * "_UFF_100Kcycles.jld2"
+    #input_file = split(structure, ".")[1] * "_UFF_10Kcycles.jld2"
+    input_file = split(structure, ".")[1] * "_UFF_100Kcycles.jld2"
     @load input_file results density
 
     pressures = [results[i]["pressure (bar)"] for i = 1:length(results)]
