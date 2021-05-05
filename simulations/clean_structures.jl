@@ -47,7 +47,8 @@ write_vtk(structure)
 
 # combine all the other graphs into a single other structure that represents
 #   the solvents
-solvents = +([structure[s] for s in deleteat!(structure_solvents, clean_structure_id)]...)
+solvents = +([structure[s] for s in deleteat!(structure_solvents,
+             clean_structure_id)]...)
 
 # rename the file so the xyz file is differentiable
 solvents = Crystal("KAXQIL_solvents", solvents.box, solvents.atoms,

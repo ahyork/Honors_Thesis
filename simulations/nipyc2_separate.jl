@@ -10,8 +10,8 @@ structure = replicate(structure, (4, 4, 4))
 
 # make bonding rules
 bonding_rules = [BondingRule(:H, :*, 0.4, 1.2),
-                 BondingRule(:N, :Ni, 0.4, 2.5),
-                 BondingRule(:O, :Ni, 0.4, 2.5),
+                 BondingRule(:N, :Ni, 1.2, 2.5),
+                 BondingRule(:O, :Ni, 1.2, 2.5),
                  BondingRule(:*, :*, 0.4, 1.9)]
 
 # create bonds on NiPyC2
