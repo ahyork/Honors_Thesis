@@ -18,7 +18,7 @@ for forcefield_name in forcefields
 
         density = crystal_density(structure)
 
-        output_filename = split(structure_name, '.')[1] * "_" * forcefield_name * "_50.0bar_10Kburn_10Ksample_snapshots_grid.jld2"
+        output_filename = split(structure_name, '.')[1] * "_" * forcefield_name * "_50.0bar_10Kburn_10Ksample_snapshots.jld2"
 
         #results = μVT_sim(structure, molecule, 298.0, 0.5, ljforcefield;
         #                  n_burn_cycles=10000, n_sample_cycles=100000,
@@ -28,12 +28,12 @@ for forcefield_name in forcefields
         results, molecules = μVT_sim(structure, molecule, 298.0, 50.0,
                                      ljforcefield; n_burn_cycles=10000,
                                      n_sample_cycles=10000,
-                                     snapshot_frequency=1,
-                                     calculate_density_grid=true,
-                                     density_grid_dx=0.5,
+                                     snapshot_frequency=1000,
+                                     #calculate_density_grid=true,
+                                     #density_grid_dx=0.5,
                                      eos=:PengRobinson,
-                                     #write_adsorbate_snapshots=true,
-                                     #results_filename_comment="snapshots",
+                                     write_adsorbate_snapshots=true,
+                                     results_filename_comment="snapshots",
                                      verbose=true
                                     )
 
